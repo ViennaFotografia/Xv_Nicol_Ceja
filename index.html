@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 16 Años - Nicol Ceja</title>
+
+    <meta name="color-scheme" content="only light">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Carattere&family=Cormorant+Garamond:wght@700&family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables y Estilos Generales - COMBINACIÓN 2: ROSA PASTEL ROMÁNTICO (PRINCIPAL) Y ORO REAL (SECUNDARIO) */
+        :root {
+            color-scheme: only light;
+
+            /* Colores Protagonistas */
+            --color-rosa-principal: #f4b6c8; /* Rosa Pastel Romántico (Principal) */
+            --color-vestido: #b8860b; /* Oro Real Secundario (Detalles, botones, bordes, contador) */
+            --color-plata: #7a2843; /* Rosa Vino Profundo (Fechas y textos destacados) */
+            
+            /* Colores de Acento y Contraste */
+            --color-acento-oscuro: #6b2239; /* Vino Rosado Oscuro (Texto en cajas claras para legibilidad) */
+            --color-acento-claro: #d4af37; /* Dorado Clásico (Bordes suaves) */
+            
+            /* Colores de Fondo y Estructura */
+            --color-fondo-pantalla: #fff7f9; /* Blanco Rosado Sutil (Fondo exterior) */
+            --color-fondo-tarjeta: rgba(252, 226, 235, 0.96); /* ROSA PASTEL (#fce2eb con opacidad) */
+            --color-cubierta: #d9829b; /* Rosa Pastel Intenso (Animación de entrada) */
+            
+            /* Colores de Texto y Botones */
+            --color-texto-principal: #5e1d32; /* Rosa Vino Oscuro para lectura nítida sobre fondo rosa pastel */
+            --color-texto-secundario: #9c6d14; /* Oro Real para títulos y acentos */
+            --color-fondo-botones: linear-gradient(135deg, #b8860b 0%, #e3be52 50%, #996d07 100%);
+            --color-texto-botones: #ffffff; /* Blanco para alto contraste sobre botones dorados */
+            
+            /* Tipografías */
+            --fuente-titulos: 'Carattere', cursive;
+            --fuente-nombres: 'Bellefair', bold, serif;
+            --fuente-texto: 'Cormorant Garamond', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--fuente-texto);
+            text-align: center;
+            background-color: var(--color-fondo-pantalla);
+        }
+
+        /* Contenedor para la imagen de fondo */
+        .background-container {
+            background-image: url('fondo.jpg');
+            background-size: 100% auto; 
+            background-position: top center; 
+            padding: 20px; 
+            background-repeat: repeat-y; 
+        }
+
+        /* Contenedor principal (estilo móvil) */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--color-fondo-tarjeta);
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(107, 34, 57, 0.28), 0 0 0 2px var(--color-acento-claro); 
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        /* Decoración de flores en las esquinas y lados */
+        .corner-flower {
+            position: absolute;
+            width: 90px; 
+            height: auto;
+            z-index: 10; 
+            pointer-events: none; 
+        }
+        .top-left { top: -15px; left: -35px; }
+        .top-right {
+            top: -15px;
+            right: -35px;
+            transform: scaleX(-1); 
+        }
+        .bottom-left {
+            bottom: -35px;
+            left: -35px;
+            transform: scaleY(-1); 
+        }
+        .bottom-right {
+            bottom: -35px;
+            right: -35px;
+            transform: scaleX(-1) scaleY(-1); 
+        }
+        .side-flower-container {
+            display: flex; 
+            justify-content: space-between; 
+            padding: 0 0; 
+            margin-top: -20px;
+        }
+
+        /* Secciones */
+        section {
+            padding: 25px 20px; 
+            position: relative;
+            background-color: transparent; 
+        }
+
+        h1, h2, h3 {
+            font-family: var(--fuente-titulos);
+            font-weight: normal;
+        }
+
+        h1 { font-size: 4rem; margin: 10px 0; color: var(--color-plata); }
+        h2 { font-size: 3rem; margin-bottom: 15px; color: var(--color-texto-secundario); text-shadow: none; }
+        h3 { font-size: 2.5rem; letter-spacing: 4px; color: var(--color-plata); }
+
+        .person-name {
+            font-family: var(--fuente-nombres);
+            font-size: 1.5rem;
+            color: var(--color-plata);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .nombres-familiares {
+            font-family: var(--fuente-nombres);
+            font-size: 2rem; 
+            color: var(--color-texto-principal);
+            line-height: 1.5;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85); 
+        }
+
+        .fuente-padres {
+            --fuente-nombres: 'Pinyon Script', cursive; 
+            font-size: 3rem;
+            color: var(--color-texto-principal);
+        }
+
+        .name-band-container {
+            background-image: url('banda_ancha.webp');
+            background-size: 100% 100%;
+            background-position: center;
+            padding: 20px 0;
+            margin: 25px -20px; 
+            filter: sepia(0.5) hue-rotate(320deg) saturate(1.15) brightness(1.02); 
+        }
+
+        p, label, .texto {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--color-texto-principal);
+        }
+
+        .separador-decorativo {
+            width: calc(100% + 30px); 
+            height: auto;
+            margin: -10px -20px 15px -20px; 
+            filter: sepia(0.85) hue-rotate(5deg) saturate(1.4) brightness(0.95); 
+        }
+
+        /* Imágenes */
+        .foto-principal {
+            width: 75%;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(107, 34, 57, 0.25);
+            margin: 20px 0;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 2px solid var(--color-vestido);
+        }
+
+        .foto-container {
+            position: relative;
+            width: 78%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .marco-gif {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            pointer-events: none; 
+        }
+
+        /* Botones */
+        .button {
+            display: inline-block;
+            background: var(--color-fondo-botones);
+            color: var(--color-texto-botones);
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: var(--fuente-nombres);
+            font-size: 1.2rem;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(107, 34, 57, 0.25);
+            font-weight: bold;
+        }
+        .button:hover { 
+            opacity: 0.92; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(107, 34, 57, 0.35);
+        }
+
+        /* Contador */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding: 0 10px; 
+        }
+        .segment {
+            background: #ffffff; 
+            padding: 15px 10px;
+            border-radius: 10px;
+            min-width: 60px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(107, 34, 57, 0.15);
+            border: 1.5px solid var(--color-acento-claro);
+        }
+        .segment .number { 
+            font-size: 1.8rem; 
+            font-weight: bold; 
+            font-family: var(--fuente-nombres); 
+            color: var(--color-acento-oscuro); 
+        }
+        .segment .unit { 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            margin-top: 5px; 
+            color: var(--color-acento-oscuro); 
+            font-weight: bold;
+        }
+
+        /* Formularios y Cajas de texto */
+        textarea, input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid var(--color-vestido);
+            border-radius: 8px;
+            font-family: var(--fuente-texto);
+            font-size: 1.1rem;
+            margin-top: 10px;
+            background-color: #ffffff; 
+            color: var(--color-acento-oscuro);
+            box-sizing: border-box;
+        }
+        textarea { height: 100px; resize: none; }
+        
+        input[type="radio"] {
+            opacity: 0;
+            position: fixed;
+            width: 0;
+        }
+
+        .confirmation-options {
+            margin: 20px 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; 
+            cursor: pointer;
+        }
+
+        .radio-label {
+            position: relative;
+            padding-left: 35px; 
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--color-texto-principal);
+        }
+
+        .radio-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--color-vestido);
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        input[type="radio"]:checked + .radio-label::after {
+            content: '';
+            position: absolute;
+            left: 6px; 
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--color-vestido);
+        }
+
+        /* Botón de Audio Flotante */
+        #fixed-items {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        #toggleButton {
+            background: var(--color-fondo-botones);
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            color: #ffffff;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        #toggleButton:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos de la sección de ubicaciones */
+        .lugar-link {
+            display: block;
+            margin-top: 40px;
+            text-decoration: none;
+            color: var(--color-texto-principal);
+        }
+        .lugar-link img {
+            width: 100%;
+            border-radius: 10px;
+            filter: brightness(0.95); 
+            margin-bottom: 15px;
+            border: 2px solid var(--color-vestido);
+            box-sizing: border-box;
+        }
+        .lugar-link .nombre-lugar {
+            font-family: var(--fuente-nombres);
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--color-texto-secundario);
+        }
+        .lugar-link .direccion-lugar, .lugar-link .hora-lugar {
+            font-family: var(--fuente-texto);
+            font-size: 1.1rem;
+        }
+        .lugar-link .hora-lugar {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #ffffff;
+            background: var(--color-fondo-botones);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        /* --- Estilos para la Cubierta de la Invitación --- */
+        .cover-panel {
+            position: fixed; 
+            left: 0;
+            width: 100%;
+            height: 50%; 
+            background: radial-gradient(circle at center, var(--color-rosa-principal) 0%, var(--color-cubierta) 100%);
+            z-index: 9998; 
+            box-sizing: border-box; 
+            transition: transform 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        #cover-top {
+            bottom: 50%; 
+            border-bottom: 2px solid var(--color-vestido);
+        }
+
+        #cover-bottom {
+            top: 50%; 
+            border-top: 2px solid var(--color-vestido);
+        }
+
+        #cover-top.opened { transform: translateY(-100%); }
+        #cover-bottom.opened { transform: translateY(100%); }
+
+        #play-button-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            z-index: 10000; 
+            transition: opacity 0.5s ease;
+        }
+
+        .play-button {
+            width: 100px;
+            height: 100px;
+            background: var(--color-fondo-botones); 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: 4px solid #ffffff; 
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 25px rgba(184, 134, 11, 0.5);
+        }
+
+        .play-button:hover { transform: scale(1.1); }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+            border-left: 36px solid #ffffff; 
+            margin-left: 8px;
+        }
+
+        /* --- Animaciones al hacer scroll --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px) scaleX(-1);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-slide-in-left.is-visible {
+            opacity: 1;
+            transform: translateX(0) scaleX(-1);
+        }
+        .animate-slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-slide-in-right.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* --- ESTILOS DEL ITINERARIO --- */
+        .itinerario-container {
+            position: relative;
+            padding: 20px 0;
+            width: 100%;
+        }
+        .itinerario-separador {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            transform: translateX(-50%);
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+            filter: brightness(0) saturate(100%) invert(52%) sepia(65%) saturate(618%) hue-rotate(8deg) brightness(92%) contrast(92%);
+        }
+
+        .itinerario-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 35px 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .itinerario-item:nth-of-type(odd) { flex-direction: row; }
+        .itinerario-item:nth-of-type(even) { flex-direction: row-reverse; }
+        
+        .itinerario-texto, .itinerario-icono-wrapper {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .itinerario-titulo {
+            font-family: var(--fuente-nombres);
+            font-size: 1.4rem;
+            color: var(--color-texto-secundario);
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .itinerario-hora {
+            font-size: 1.2rem;
+            color: var(--color-texto-principal);
+        }
+
+        .itinerario-icono {
+            width: 60px; 
+            height: 60px;
+            background-color: #ffffff; 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--color-vestido);
+            box-shadow: 0 0 10px rgba(107, 34, 57, 0.18);
+        }
+        .itinerario-icono img {
+            width: 65%; 
+            height: 65%;
+        }
+
+        /* SVG Textos */
+        .texto-xv {
+            font-family: 'Great Vibes', cursive, sans-serif;
+            font-size: 250px;
+            fill: url(#superPlateado);
+            stroke: url(#bordePlateado);
+            stroke-width: 3px;
+            filter: url(#sombraBrillante);
+            text-anchor: middle;
+        }
+        .texto-1 {
+            font-family: 'Great Vibes', cursive, sans-serif;
+            font-size: 190px;
+            fill: url(#superPlateado);
+            stroke: url(#bordePlateado);
+            stroke-width: 2px;
+            filter: url(#sombraBrillante);
+            text-anchor: middle;
+        }
+        .texto-2 {
+            font-family: 'Great Vibes', cursive, sans-serif;
+            font-size: 150px;
+            fill: url(#superPlateado);
+            stroke: url(#bordePlateado);
+            stroke-width: 1px;
+            filter: url(#sombraBrillante);
+            text-anchor: middle;
+        }
+        .texto-3 {
+            font-family: 'Great Vibes', cursive, sans-serif;
+            font-size: 120px;
+            fill: url(#superPlateado);
+            stroke: url(#bordePlateado);
+            stroke-width: 1px;
+            filter: url(#sombraBrillante);
+            text-anchor: middle;
+        }
+
+        /* Contenedor para la galería y las cintas */
+        .gallery-wrapper {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        /* Cuadrícula de fotos */
+        .grid-gallery {
+            display: grid;
+            gap: 10px;
+        }
+        .grid-3-cols {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-2-cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-1-cols {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1.5px solid var(--color-acento-claro);
+            box-sizing: border-box;
+        }
+
+        /* Cintas decorativas para la galería */
+        .gallery-corner {
+            position: absolute;
+            width: 60px; 
+            height: auto;
+            z-index: 5; 
+            pointer-events: none; 
+        }
+        .gallery-top-left {
+            top: -20px;
+            left: -20px;
+        }
+        .gallery-top-right {
+            top: -20px;
+            right: -20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cover-top" class="cover-panel"></div>
+    <div id="cover-bottom" class="cover-panel"></div>
+    <div id="play-button-container">
+        <div class="play-button" id="cover-play-button">
+            <div class="play-icon"></div>
+        </div>
+    </div>
+
+    <div class="background-container">
+        <div class="container">
+            <img src="flor2.png" alt="Decoración floral" class="corner-flower top-left">
+            <img src="flor2.png" alt="Decoración floral" class="corner-flower top-right">
+            <img src="flor2.png" alt="Decoración floral" class="corner-flower bottom-left">
+            <img src="flor2.png" alt="Decoración floral" class="corner-flower bottom-right">
+            
+            <section id="portada">
+                <div style="position: relative; width: 95%; margin: 0 auto;" class="animate-on-scroll">
+                    <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%">
+                        <defs>
+                            <linearGradient id="superPlateado" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#9c6d14" /> 
+                                <stop offset="30%" stop-color="#d4af37" /> 
+                                <stop offset="55%" stop-color="#7a2843" /> 
+                                <stop offset="80%" stop-color="#c59b27" /> 
+                                <stop offset="100%" stop-color="#6b2239" /> 
+                            </linearGradient>
+    
+                            <linearGradient id="bordePlateado" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#b8860b" />
+                                <stop offset="50%" stop-color="#fce4ec" />
+                                <stop offset="100%" stop-color="#7a2843" />
+                            </linearGradient>
+    
+                            <filter id="sombraBrillante" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="2" dy="3" stdDeviation="2.5" flood-color="#b8860b" flood-opacity="0.35"/>
+                            </filter>
+                        </defs>
+    
+                        <text x="600" y="230" class="texto-xv">Mis 16</text>
+                        <text x="600" y="420" class="texto-xv">Años</text>
+                    </svg>
+                </div>
+                          
+                <div class="foto-container animate-on-scroll">
+                    <img class="foto-principal" src="foto_principal.jpg" alt="Foto de Nicol Ceja">
+                    <img class="marco-gif" src="aro-brillo.gif" alt="Marco brillante">
+                </div>
+                
+                <p class="texto animate-on-scroll" style="font-style: italic; padding: 0 20px;">
+                    "Con la bendición de Dios y el amor de mi padre y familiares, te invito a celebrar conmigo mis 16 años"
+                </p> 
+                
+                <div class="name-band-container animate-on-scroll">
+                    <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="100%">
+                        <text x="600" y="170" class="texto-1">Nicol Ceja</text>
+                    </svg>
+                </div>
+                <h3 class="animate-on-scroll" style="margin-top: 0;">14 . NOV . 2026</h3>
+                
+                <div class="countdown-container animate-on-scroll">
+                    <div class="segment"><span class="number" id="days">0</span><span class="unit">Días</span></div>
+                    <div class="segment"><span class="number" id="hours">0</span><span class="unit">Horas</span></div>
+                    <div class="segment"><span class="number" id="minutes">0</span><span class="unit">Min</span></div>
+                    <div class="segment"><span class="number" id="seconds">0</span><span class="unit">Seg</span></div>
+                </div>
+            </section>
+
+            <section>
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-1">Padrinos</text>
+                </svg>
+                <img class="separador-decorativo animate-on-scroll" src="1_separador.webp" alt="separador">
+                <p class="nombres-familiares animate-on-scroll">Betsy Ponce Chávez<br>&amp;<br>Giovanni Ponce Chávez</p>
+
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Chambelán</text>
+                </svg>
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Principal</text>
+                </svg>
+                <img class="separador-decorativo animate-on-scroll" src="1_separador.webp" alt="separador">
+                <p class="nombres-familiares animate-on-scroll">Alejandro López</p>
+            </section>
+
+            <div class="side-flower-container">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-left" style="width: 70px;">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-right" style="width: 70px;">
+            </div>
+
+            <section>
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Iglesia</text>
+                </svg>
+
+                <a href="https://maps.app.goo.gl/zPcucg7gGsoQBWFE7?g_st=ic" target="_blank" class="lugar-link animate-on-scroll">
+                    <img src="foto_iglesia.jpg" alt="Foto de la Parroquia San Antonio de Padua">
+                    <h4 class="nombre-lugar">Parroquia San Antonio de Padua</h4>
+                    <p class="direccion-lugar">La Gloria, Tijuana, B.C.</p>
+                    <p class="hora-lugar">04:00 PM</p>
+                    <br>
+                    <div class="button" style="margin-top: 25px;">Ir al Mapa</div>
+                </a>
+
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Lugar del Evento</text>
+                </svg>
+
+                <a href="https://maps.app.goo.gl/G8x2K7C7irUwdC3H6?g_st=ic" target="_blank" class="lugar-link animate-on-scroll">
+                    <img src="foto_local.png" alt="Foto del Salón Jardines Del Rey">
+                    <h4 class="nombre-lugar">Salón Jardines Del Rey</h4>
+                    <p class="direccion-lugar">Calle Miguel Hidalgo 202, La Gloria, 22645 La Joya, B.C.</p>
+                    <p class="hora-lugar">07:00 PM</p>
+                    <br>
+                    <div class="button" style="margin-top: 25px;">Ir al Mapa</div>
+                </a>
+            </section>
+
+            <div class="side-flower-container">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-left" style="width: 70px;">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-right" style="width: 70px;">
+            </div>
+
+            <section>
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Programa del Evento</text>
+                </svg>
+                
+                <div class="itinerario-container">
+                    <img src="separador_vertical.png" class="itinerario-separador" alt="Separador floral vertical">
+
+                    <div class="itinerario-item animate-on-scroll">
+                        <div class="itinerario-texto">
+                            <span class="itinerario-titulo">Iglesia</span>
+                            <span class="itinerario-hora">04:00 PM</span>
+                        </div>
+                        <div class="itinerario-icono-wrapper">
+                            <div class="itinerario-icono">
+                                <img src="iglesia.png" alt="Icono de Iglesia">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerario-item animate-on-scroll">
+                        <div class="itinerario-texto">
+                            <span class="itinerario-titulo">Recepción</span>
+                            <span class="itinerario-hora">07:00 PM</span>
+                        </div>
+                        <div class="itinerario-icono-wrapper">
+                            <div class="itinerario-icono">
+                                <img src="recepcion.png" alt="Icono de Recepción">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="itinerario-item animate-on-scroll">
+                        <div class="itinerario-texto">
+                            <span class="itinerario-titulo">Comida</span>
+                            <span class="itinerario-hora">08:00 PM - 09:00 PM</span>
+                        </div>
+                        <div class="itinerario-icono-wrapper">
+                            <div class="itinerario-icono">
+                                <img src="comida.png" alt="Icono de Comida">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="itinerario-item animate-on-scroll">
+                        <div class="itinerario-texto">
+                            <span class="itinerario-titulo">¡Gracias por venir!</span>
+                            <span class="itinerario-hora">02:00 AM</span>
+                        </div>
+                        <div class="itinerario-icono-wrapper">
+                            <div class="itinerario-icono">
+                                <img src="fin.png" alt="Icono de Fin de Fiesta">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Código de Vestimenta</text>
+                </svg>
+                <div class="itinerario-item animate-on-scroll" style="flex-direction: column;">
+                    <div class="itinerario-icono" style="margin-bottom: 10px;"><img src="vestimenta.webp" alt="Icono de Vestimenta"></div>
+                    <h2 class="person-name" style="margin-top:10px;">Formal</h2>
+                    <p class="texto">El color rosa queda reservado exclusivamente para la quinceañera.</p>
+                </div>
+            </section>
+
+            <div class="side-flower-container">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-left" style="width: 70px;">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-right" style="width: 70px;">
+            </div>
+            
+            <section>
+                <h2 class="animate-on-scroll">Mis Momentos</h2>
+                <div class="gallery-wrapper">
+                    <img src="v3.webp" alt="Decoración" class="gallery-corner gallery-top-left">
+                    <img src="v4.webp" alt="Decoración" class="gallery-corner gallery-top-right">
+                    <div class="grid-gallery grid-2-cols">
+                        <img src="foto_principal.jpg" alt="Galeria 1" class="animate-slide-in-left">
+                        <img src="fotos/7.jpg" alt="Galeria 2" class="animate-slide-in-left">
+                        <img src="fotos/7.jpg" alt="Galeria 3" class="animate-slide-in-right">
+                        <img src="foto_principal.jpg" alt="Galeria 4" class="animate-slide-in-right">
+                    </div>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="v3.webp" alt="Decoración" class="gallery-corner gallery-top-left">
+                    <img src="v4.webp" alt="Decoración" class="gallery-corner gallery-top-right">
+                    <div class="grid-1-cols grid-gallery" style="height: 100%;">
+                        <img src="fotos/7.jpg" style="height: 100%;" alt="Galeria 9" class="animate-on-scroll">
+                    </div>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="v3.webp" alt="Decoración" class="gallery-corner gallery-top-left">
+                    <img src="v4.webp" alt="Decoración" class="gallery-corner gallery-top-right">
+                    <div class="grid-gallery grid-2-cols">
+                        <img src="fotos/7.jpg" alt="Galeria 5" class="animate-slide-in-left">
+                        <img src="foto_principal.jpg" alt="Galeria 6" class="animate-slide-in-right">
+                        <img src="foto_principal.jpg" alt="Galeria 7" class="animate-slide-in-left">
+                        <img src="fotos/7.jpg" alt="Galeria 8" class="animate-slide-in-right">
+                    </div>
+                </div>
+            </section>
+            
+            <div class="side-flower-container">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-left" style="width: 70px;">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-right" style="width: 70px;">
+            </div>
+            
+            <section class="animate-on-scroll">
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Regalos</text>
+                </svg>
+                <p style="font-size: 3rem; margin: 0;">🎁</p>
+                <p class="texto">El mejor regalo es tu presencia, pero si deseas obsequiarme algo, puedes hacerlo en la</p>
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-3">Lluvia de Sobres</text>
+                </svg>
+                <p class="texto">Es la tradición de regalar dinero en efectivo dentro de un sobre.</p>
+
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                    <text x="600" y="150" class="texto-2">Buzón de deseos</text>
+                </svg>
+                <p class="texto">Si quieres dejarme un lindo mensaje por mis 16 años, puedes hacerlo aquí:</p>
+                <textarea id="mensajeInput" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <br>
+                <button class="button" onclick="enviarMensajeWApp()">Enviar por WhatsApp</button>
+            </section>
+
+            <div class="side-flower-container">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-left" style="width: 70px;">
+                <img src="flor2.png" alt="Decoración floral" class="animate-slide-in-right" style="width: 70px;">
+            </div>
+            
+            <section class="animate-on-scroll">
+                <div class="animate-on-scroll" style="max-width: 100%; margin: 0 auto; text-align: center; padding-bottom: 20px;">
+
+                    <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+                        <text x="600" y="150" class="texto-2">¡Confirma tu asistencia!</text>
+                    </svg>
+
+                    <p class="texto" style="margin-bottom: 5px; font-weight: bold;">
+                        Tu presencia es muy valiosa para nosotros.
+                    </p>
+                    <p class="texto" style="margin-bottom: 25px;">
+                        Esta invitación es válida para:
+                    </p>
+
+                    <div style="position: relative; display: inline-block; width: 16rem; height: 6rem; margin: 0 auto;">
+                        <img src="ticket_dorado.png" alt="ticket" style="width: 100%; height: 100%; transform: rotate(180deg); display: block;">
+                        
+                        <div style="position: absolute; left: 0.5rem; top: -0.8rem; width: 3rem; height: 100%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 150" width="100%">
+                                <defs>
+                                    <linearGradient id="superDorado" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#BF953F" />
+                                        <stop offset="30%" stop-color="#FCF6BA" />
+                                        <stop offset="50%" stop-color="#B38728" />
+                                        <stop offset="75%" stop-color="#FBF5B7" />
+                                        <stop offset="100%" stop-color="#AA771C" />
+                                    </linearGradient>
+                                    <linearGradient id="bordeDorado" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#5c3805" />
+                                        <stop offset="50%" stop-color="#FFEA73" />
+                                        <stop offset="100%" stop-color="#5c3805" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <text id="cantidad-pases" x="25" y="85" class="texto-2" style="font-size: 85px; fill: url(#superDorado); stroke: url(#bordeDorado); filter: url(#sombraBrillante);">1</text>
+                            </svg>
+                        </div>
+                        
+                        <h3 id="texto-persona" style="position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); margin: 0; color: #7a2843; font-size: 3.2rem; letter-spacing: 2px; text-shadow: 1px 1px 3px rgba(255,255,255,0.8);">
+                            Persona
+                        </h3>
+                    </div>
+                </div>
+                <form onsubmit="return confirmarAsistencia(event)">
+                    <label for="familia" class="texto">Nombre y Apellido:</label><br>
+                    <input type="text" id="familia" maxlength="30" required>
+
+                    <div class="confirmation-options">
+                        <label class="texto" style="display: block; margin-bottom: 10px;">Confirmo que:</label>
+                        <div class="radio-option">
+                            <input type="radio" id="asistire" name="confirmacion" value="asistire" checked>
+                            <label for="asistire" class="radio-label">Asistiré</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="noAsistire" name="confirmacion" value="noAsistire">
+                            <label for="noAsistire" class="radio-label">No Asistiré</label>
+                        </div>
+                    </div>
+
+                    <br>
+                    <button type="submit" class="button">Confirmar por WhatsApp</button>
+                </form>
+            </section>
+
+            <section class="animate-on-scroll">
+                <svg class="animate-on-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%">
+                    <text x="600" y="150" class="texto-2">Comparte tus</text>
+                    <text x="600" y="300" class="texto-2">Momentos</text>
+                </svg>
+                <p style="font-size: 3rem; margin: 0;">📸</p>
+                <p class="texto">Sube tus fotos y comparte tus mejores recuerdos de este momento único. ¡Estamos emocionados de ver tus fotos!</p>
+                <img src="qr-code.png" alt="Código QR para Google Fotos" style="width: 180px; border-radius: 15px; margin-top: 15px; border: 3px solid var(--color-vestido); box-shadow: 0 4px 10px rgba(0,0,0,0.2); background-color: #FFFFFF;">
+                <br>
+                <a href="https://drive.google.com/drive/folders/1BYoZzhyfzoxGKKi9cyY6w-ObKYu5nmPR?usp=sharing" target="_blank" class="button" style="margin-top: 25px;">Ver Fotos</a>
+            </section>
+        </div>
+    </div>
+
+    <div id="fixed-items">
+        <button id="toggleButton" onclick="toggleAudio()">
+            🎵
+        </button>
+        <audio id="music" loop>
+            <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // 1. Lógica del Contador (14 de Noviembre de 2026 - 7:00 PM)
+        const fechaEvento = new Date("Nov 14, 2026 19:00:00").getTime();
+        
+        const intervalo = setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaEvento - ahora;
+
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = dias;
+            document.getElementById("hours").innerText = horas;
+            document.getElementById("minutes").innerText = minutos;
+            document.getElementById("seconds").innerText = segundos;
+
+            if (distancia < 0) {
+                clearInterval(intervalo);
+                document.getElementById("days").innerText = "0";
+                document.getElementById("hours").innerText = "0";
+                document.getElementById("minutes").innerText = "0";
+                document.getElementById("seconds").innerText = "0";
+            }
+        }, 1000);
+
+        const lada = "52"; 
+        const numeroConfirmacion = "6643553227"; 
+
+        // 2. Lógica de Envío de Mensaje (Buzón)
+        function enviarMensajeWApp() {
+            var mensaje = document.getElementById('mensajeInput').value;
+            if(!mensaje) return alert("Por favor escribe un mensaje primero.");
+            var url = "https://api.whatsapp.com/send?phone=" + lada + numeroConfirmacion + "&text=" + encodeURIComponent(mensaje);
+            window.open(url, '_blank');
+        }
+
+        // 3. Lógica de Confirmación de Asistencia
+        function confirmarAsistencia(event) {
+            event.preventDefault();
+            var nombre = document.getElementById("familia").value;
+            var asistire = document.getElementById("asistire").checked;
+
+            var mensajeCA = asistire 
+                ? `Hola, soy ${nombre} y confirmo mi asistencia a los 16 años de Nicol Ceja.` 
+                : `Hola, soy ${nombre} y lamentablemente, no podré asistir a los 16 años de Nicol Ceja.`;
+
+            var urlCA = "https://api.whatsapp.com/send?phone=" + lada + numeroConfirmacion + "&text=" + encodeURIComponent(mensajeCA);
+            window.open(urlCA, '_blank').focus();
+            
+            return false;
+        }
+
+        // 4. Lógica de Reproductor de Audio
+        var reproductor = document.getElementById("music");
+        var botonAudio = document.getElementById("toggleButton");
+        var estaReproduciendo = false;
+
+        function toggleAudio() {
+            if (estaReproduciendo) {
+                reproductor.pause();
+                botonAudio.innerHTML = "🔇";
+            } else {
+                reproductor.play();
+                botonAudio.innerHTML = "🎵";
+            }
+            estaReproduciendo = !estaReproduciendo;
+        }
+        
+        // Iniciar audio con la primera interacción del usuario
+        const coverTop = document.getElementById('cover-top');
+        const coverBottom = document.getElementById('cover-bottom');
+        const coverPlayButton = document.getElementById('cover-play-button');
+        const playButtonContainer = document.getElementById('play-button-container');
+
+        document.body.style.overflow = 'hidden';
+
+        playButtonContainer.addEventListener('click', () => {
+            coverPlayButton.style.pointerEvents = 'none';
+            playButtonContainer.style.opacity = '0';
+            coverTop.classList.add('opened');
+            coverBottom.classList.add('opened');
+
+            if (reproductor.paused) {
+                reproductor.volume = 0.5; 
+                toggleAudio();
+            }
+
+            setTimeout(() => {
+                document.body.style.overflow = 'auto';
+                playButtonContainer.style.display = 'none';
+                coverTop.style.display = 'none';
+                coverBottom.style.display = 'none';
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); 
+                        }
+                    });
+                }, {
+                    threshold: 0.1 
+                });
+
+                const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+                const elementsToAnimateSides = document.querySelectorAll('.animate-slide-in-left, .animate-slide-in-right');
+                
+                elementsToAnimate.forEach(el => observer.observe(el)); 
+                elementsToAnimateSides.forEach(el => observer.observe(el)); 
+            }, 1800); 
+        });
+
+        // 5. Lógica para pausar la música si la pestaña no está visible
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                if (estaReproduciendo) {
+                    reproductor.pause();
+                }
+            } else {
+                if (estaReproduciendo) {
+                    reproductor.play();
+                }
+            }
+        });
+
+        // Lógica de Animación al Hacer Scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            const elementsToAnimateSides = document.querySelectorAll('.animate-slide-in-left, .animate-slide-in-right');
+            
+            elementsToAnimate.forEach(el => observer.observe(el)); 
+            elementsToAnimateSides.forEach(el => observer.observe(el)); 
+        });
+
+        // 6. Lógica para obtener cantidad de personas por parámetro GET (?p=X)
+        document.addEventListener('DOMContentLoaded', () => {
+            const parametros = new URLSearchParams(window.location.search);
+            const pases = parametros.get('p');
+
+            // Validar que el parámetro exista, sea un número y sea mayor a 0
+            if (pases && !isNaN(pases) && parseInt(pases) > 0) {
+                document.getElementById('cantidad-pases').textContent = pases;
+                
+                // Cambiar la etiqueta a plural si son 2 o más pases
+                if (parseInt(pases) > 1) {
+                    document.getElementById('texto-persona').textContent = 'Personas';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
